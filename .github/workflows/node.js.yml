@@ -13,7 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: 'Checkout'
+        uses: actions/checkout@v4.2.2
       - name: 'Hello world'
         run: echo "Hello world"
       - name: 'Dime la fecha'
         run: echo "La fecha es $(date)"
+      - name: 'Listar archivos'
+        run: ls -la
