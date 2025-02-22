@@ -21,7 +21,10 @@
     "skipLibCheck": true,
     "experimentalDecorators": true,
     "paths": {
-      "@test/*": ["tests/*"]
+      "@test/*": ["tests/*"],
+      "@routers/*": ["src/routers/*"],
+      "@controllers/*": ["src/controllers/*"],
+      "@services/*": ["src/services/*"]
     }
   },
   "include": ["src/**/*", "tests/**/*"],
