@@ -13,6 +13,15 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
 
+    - name: Run tests
+      uses: actions/setup-node@v4.2.0
+      with:
+        node-version: 18
+        cache: 'npm'
+    - run: npm install
+    - run: npm run build
+    - run: npm test
+
     - name: Configure AWS Credentials Action for GitHub Actions
       uses: aws-actions/configure-aws-credentials@v4.1.0
       with:
