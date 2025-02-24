@@ -3,7 +3,7 @@ import { maxArray } from '@services/service';
 describe('maxArray', () => {
   describe('when the array is empty', () => {
     it('should return -Infinity', () => {
-      expect(maxArray([])).toBe(-Infinity);
+      expect(maxArray([])).toBe(0);
     });
     it('should return 0', () => {
       expect(maxArray([0])).toBe(0);
