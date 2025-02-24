@@ -1,0 +1,65 @@
+{
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:381492034267:task-definition/max-array-task-definition:1",
+  "containerDefinitions": [
+      {
+          "name": "max-array-container",
+          "image": "381492034267.dkr.ecr.us-east-1.amazonaws.com/dfa/max-array-ecr",
+          "cpu": 0,
+          "memory": 2048,
+          "portMappings": [
+              {
+                  "name": "max-array-container-3000-tcp",
+                  "containerPort": 3000,
+                  "hostPort": 3000,
+                  "protocol": "tcp",
+                  "appProtocol": "http"
+              }
+          ],
+          "essential": true,
+          "environment": [],
+          "environmentFiles": [],
+          "mountPoints": [],
+          "volumesFrom": [],
+          "ulimits": [],
+          "systemControls": []
+      }
+  ],
+  "family": "max-array-task-definition",
+  "executionRoleArn": "arn:aws:iam::381492034267:role/ecsTaskExecutionRole",
+  "networkMode": "awsvpc",
+  "revision": 1,
+  "volumes": [],
+  "status": "ACTIVE",
+  "requiresAttributes": [
+      {
+          "name": "com.amazonaws.ecs.capability.ecr-auth"
+      },
+      {
+          "name": "ecs.capability.execution-role-ecr-pull"
+      },
+      {
+          "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+      },
+      {
+          "name": "ecs.capability.task-eni"
+      }
+  ],
+  "placementConstraints": [],
+  "compatibilities": [
+      "EC2",
+      "FARGATE"
+  ],
+  "requiresCompatibilities": [
+      "FARGATE"
+  ],
+  "cpu": "1024",
+  "memory": "2048",
+  "runtimePlatform": {
+      "cpuArchitecture": "X86_64",
+      "operatingSystemFamily": "LINUX"
+  },
+  "registeredAt": "2025-02-22T23:52:49.788Z",
+  "registeredBy": "arn:aws:iam::381492034267:user/diegoff",
+  "enableFaultInjection": false,
+  "tags": []
+}
